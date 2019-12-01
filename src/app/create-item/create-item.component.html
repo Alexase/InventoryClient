@@ -1,0 +1,26 @@
+<h3>Create item</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="item.name" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Amount</label>
+      <input type="text" class="form-control" id="amount" required [(ngModel)]="item.amount" name="amount">
+    </div>
+
+    <div class="form-group">
+      <label for="name">inventory code</label>
+      <input type="text" class="form-control" id="invCode" required [(ngModel)]="item.invCode" name="invCode">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <!-- <button class="btn btn-success" (click)="newItem()">Add</button> -->
+</div>

@@ -1,0 +1,10 @@
+
+<form (ngSubmit)="onSearch(id)">
+  
+  <div class="form-group">
+    <label for="search">Search by Item No</label>
+    <input type="text" class="form-control" id="id" required [(ngModel)]="id" name="id">
+  </div>
+
+  <button type="submit" class="btn btn-success">Search</button>
+</form>

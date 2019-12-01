@@ -1,0 +1,34 @@
+<div class="panel panel-primary">
+  <br>
+<app-search-item></app-search-item>
+<br>
+  <div class="panel-heading">
+    <h2>item List</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>item No</th>
+          <th>name</th>
+          <th>amount</th>
+          <th>inventary code</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of items | async">
+          <td>{{item.itemNo}}</td>
+          <td>{{item.name}}</td>
+          <td>{{item.amount}}</td>
+          <td>{{item.invCode}}</td>
+          <td><button (click)="deleteItem(item.itemNo)" class="btn btn-danger">Delete</button>
+              <button (click)="updateItem(item.itemNo)" class="btn btn-info" style="margin-left: 10px">Update</button>
+              <button (click)="ItemDetails(item.itemNo)" class="btn btn-info" style="margin-left: 10px">Details</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
